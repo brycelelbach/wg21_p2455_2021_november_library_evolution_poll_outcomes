@@ -58,7 +58,7 @@ Thank you to everyone who participated, and to the proposal authors for all
 
 <tr>
 <td style="padding-bottom: 16px;">
-Poll 1: Send [[P2465R1]] (Standard Library Modules std And std.compat) to
+Poll 1: Send [[P2465R1]] (Standard Library Modules `std` And `std.compat`) to
   Library Working Group for C++23, classified as a focus ([[P0592R4]] bucket 1
   item).
 <td>20
@@ -82,7 +82,7 @@ Poll 2: Send [[P2387R2]] (Pipe Support For User-Defined Range Adaptors) to
 
 <tr>
 <td style="padding-bottom: 16px;">
-Poll 3: Send [[P2443R0]] (views::chunk_by) to Library Working Group for C++23,
+Poll 3: Send [[P2443R0]] (`views::chunk_by`) to Library Working Group for C++23,
   classified as an addition ([[P0592R4]] bucket 3 item).
 <td>14
 <td>5
@@ -93,9 +93,9 @@ Poll 3: Send [[P2443R0]] (views::chunk_by) to Library Working Group for C++23,
 
 <tr>
 <td style="padding-bottom: 16px;">
-Poll 4: Modify [[P2442R0]] (Windowing Range Adaptors: views::chunk And
-  views::slide) by replacing the current feature test macro with separate
-  feature test macros for views::chunk and views::slide and then send the
+Poll 4: Modify [[P2442R0]] (Windowing Range Adaptors: `views::chunk` And
+  `views::slide`) by replacing the current feature test macro with separate
+  feature test macros for `views::chunk` and `views::slide` and then send the
   revised paper to Library Working Group for C++23, classified as an addition
   ([[P0592R4]] bucket 3 item).
 <td>14
@@ -107,9 +107,9 @@ Poll 4: Modify [[P2442R0]] (Windowing Range Adaptors: views::chunk And
 
 <tr>
 <td style="padding-bottom: 16px;">
-Poll 5: Send [[P2440R0]] (ranges::iota, ranges::shift_left, And
-  ranges::shift_right) to Library Working Group for C++23, classified as an
-  addition ([[P0592R4]] bucket 3 item).
+Poll 5: Send [[P2440R0]] (`ranges::iota`, `ranges::shift_left`, And
+  `ranges::shift_right`) to Library Working Group for C++23, classified as
+  an addition ([[P0592R4]] bucket 3 item).
 <td>11
 <td>12
 <td>0
@@ -154,9 +154,9 @@ Poll 8: Send [[P2419R1]] (Clarify Handling Of Encodings In Localized Formatting
 
 <tr>
 <td style="padding-bottom: 16px;">
-Poll 9: Send [[P2460R0]] (Relax Requirements On wchar_t To Match Existing
-  Practices) to Library Working Group for C++23, classified as an improvement of
-  an existing feature ([[P0592R4]] bucket 2 item).
+Poll 9: Send [[P2460R0]] (Relax Requirements On `wchar_t` To Match Existing
+  Practices) to Library Working Group for C++23, classified as an improvement
+  of an existing feature ([[P0592R4]] bucket 2 item).
 <td>12
 <td>15
 <td>1
@@ -166,7 +166,7 @@ Poll 9: Send [[P2460R0]] (Relax Requirements On wchar_t To Match Existing
 
 <tr>
 <td style="padding-bottom: 16px;">
-Poll 10: Send [[P2445R0]] (forward_like) to Library Working Group for C++23,
+Poll 10: Send [[P2445R0]] (`forward_like`) to Library Working Group for C++23,
   classified as an addition ([[P0592R4]] bucket 3 item).
 <td>14
 <td>11
@@ -177,9 +177,9 @@ Poll 10: Send [[P2445R0]] (forward_like) to Library Working Group for C++23,
 
 <tr>
 <td style="padding-bottom: 16px;">
-Poll 11: Send [[P2417R0]] (A More constexpr bitset) to Library Working Group
-  for C++23, classified as an improvement of an existing feature ([[P0592R4]]
-  bucket 2 item).
+Poll 11: Send [[P2417R0]] (A More `constexpr` `bitset`) to Library Working
+  Group for C++23, classified as an improvement of an existing feature
+  ([[P0592R4]] bucket 2 item).
 <td>13
 <td>13
 <td>4
@@ -190,9 +190,9 @@ Poll 11: Send [[P2417R0]] (A More constexpr bitset) to Library Working Group
 <tr>
 <td style="padding-bottom: 16px;">
 Poll 12: Modify [[P1841R1]] (Wording For Individually Specializable Numeric
-  Traits) by applying [[P2485R0]] (Do Not Add value_exists And value_or To
-  C++23), and then send the revised paper to Library Working Group for C++23,
-  classified as an addition ([[P0592R4]] bucket 3 item).
+  Traits) by applying [[P2485R0]] (Do Not Add `value_exists` And `value_or`
+  To C++23), and then send the revised paper to Library Working Group for
+  C++23, classified as an addition ([[P0592R4]] bucket 3 item).
 <td>13
 <td>8
 <td>0
