@@ -1,8 +1,8 @@
 <pre class='metadata'>
 Title: 2021 November Library Evolution Poll Outcomes
-Shortname: D2455
+Shortname: P2455
 Revision: 0
-Status: D
+Status: P
 Group: WG21
 Audience: WG21
 Editor: Bryce Adelstein Lelbach (he/him/his) — Library Evolution Chair, NVIDIA, brycelelbach@gmail.com
@@ -14,6 +14,7 @@ Markup Shorthands: markdown yes
 Toggle Diffs: no
 No Abstract: yes
 Boilerplate: style-syntax-highlighting off
+Default Biblio Display: direct
 </pre>
 
 <style>
@@ -603,11 +604,11 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > See [[P2491R0]] (Text Encodings Follow-Up) for details. In short:
 >
 > - [[P1885R8]] re-uses the encoding "UTF16" for a different purpose, which
->   causes confusion.
+>     causes confusion.
 > - [[P1885R8]] cannot properly represent the UCS-2 wide encoding used on
->   Microsoft Windows before the switch to UTF-16.
+>     Microsoft Windows before the switch to UTF-16.
 > - [[P1885R8]] attempts to specify object representation, which breaks an
->   important C++ abstraction barrier
+>     important C++ abstraction barrier
 >
 > — Strongly Against
 
