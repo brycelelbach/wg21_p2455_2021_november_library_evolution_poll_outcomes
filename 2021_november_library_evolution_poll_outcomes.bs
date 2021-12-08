@@ -182,7 +182,7 @@ Poll 11: Send [[P2417R0]] (A More `constexpr` `bitset`) to Library Working
   ([[P0592R4]] bucket 2 item).
 <td>13
 <td>13
-<td>4
+<td>3
 <td>0
 <td>0
 <td>Strong consensus in favor.
