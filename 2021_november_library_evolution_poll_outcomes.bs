@@ -224,7 +224,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > preserving namespace hygiene. The alternative of `import std;` followed by
 > `using namespace std;` is strictly worse.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Simplicity argues in favor of providing this feature even if we later provide
 > smaller modules. While the idea of having `std.foo` be such a subset of `std`
@@ -233,7 +233,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > them, and if any come to be it will not be fatal to have `std.compat` be one
 > exception to the rule.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > We need something like this badly. It makes sense that there are two modules.
 > I agree that the "cleaner" option should be easier to type. I also agree that
@@ -256,13 +256,13 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > Library, it lives in the `std` namespace). I would hope that coding standards
 > discourage `import std.compat` in favor of `import std`."
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > I'm not happy with the name `std.compat`, but I can live with it. `stdcompat`
 > would avoid the whole dot-confusion and I don't understand why people insist
 > on the dot.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > I like the proposal for its simplicity and that we managed to for once give
 > the good default syntax space to the modern best practice. I would have
@@ -271,27 +271,27 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > `std.compiler_support`, `std.core`, `std.freestanding`, ...) but I am aware
 > that we did not have time in the C++23 timeframe.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > It will finally provide the standard library module support that was missing
 > from C++20. Voting weakly in favor because the current scheme makes it
 > unnecessarily awkward to use types like `int32_t`.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > This is a kind of "bare-minimum" modularisation. It's hard to judge the value
 > of this, but I suppose we need to do *something*.
 >
-> -- Neutral
+> — Neutral
 
 > By examples, this proposal destroys the possibility of having a reasonable meaning for dots in modules names.
 >
-> -- Did Not Participate
+> — Did Not Participate
 
 > I am still unconvinced that it's a good idea to claim the unqualified `std`
 > module name.
 >
-> -- Weakly Against
+> — Weakly Against
 
 > Grabbing `std` before we have any experience or plan for how module structure
 > affects evolution of the library is reckless. We will regret this.
@@ -306,7 +306,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > "Can't teach"
 > `import std.all;`
 >
-> -- Strongly Against
+> — Strongly Against
 
 ## Poll 2: [[P2387R2]] Pipe Support For User-Defined Range Adaptors ## {#poll-2}
 
@@ -316,19 +316,19 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > C++20 was one of my biggest fear when we standardized ranges. I am happy that
 > we get it now.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > I believe this is most important range related paper, as it opens path for
 > the libraries that defines views that can interoperate with standard ones. It
 > allows us to escape "the standard should provide every view, otherwise they
 > will not pipeable" trap.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This is the piece that enables interop with standard range adaptor closure
 > objects; the wording needs a bit more work, but the design is sound.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > The author carefully surveys different implementation approaches, and makes a
 > reasonable decision. The only reason I'm not voting SF is because I'm not a
@@ -339,7 +339,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > the `bind_back` wording into the `bind_front` clause with minimal wording
 > changes, and renamed the clause to describe both.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > The pipe syntax can't be taken seriously so long as it is restricted to
 > standard-library adaptors; one can't write a template that applies an
@@ -347,70 +347,70 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > I am not well-informed about the details of the design tradeoffs presented in
 > the paper.
 >
-> -- Did Not Participate
+> — Did Not Participate
 
 ## Poll 3: [[P2443R0]] `views::chunk_by` ## {#poll-3}
 
 > This is an immediately useful feature that comes up regularly in intermediate
 > students code.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This is a quite useful range adaptor and has been proven in the field in
 > ranges v3.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This is a feature that will help make ranges more usable and complete in C++23.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This is one of the many steps in filling out ranges.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 ## Poll 4: [[P2442R0]] Windowing Range Adaptors: `views::chunk` And `views::slide` ## {#poll-4}
 
 > A sensible and uncontroversial standard view.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Useful functionality, well specified.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Extending ranges will help more developers to be pulled towards it
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > I have not followed this paper, although the semantics seem eminently obvious.
 >
-> -- Did Not Participate
+> — Did Not Participate
 
 ## Poll 5: [[P2440R0]] `ranges::iota`, `ranges::shift_left`, And `ranges::shift_right` ## {#poll-5}
 
 > There should be a range algorithm for every one of the iterator algorithms in
 > the Standard Library. This is a step in that direction.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > These are features that will help make ranges more usable and complete in
 > C++23. I'm convinced by the author's argument that `shift_left` and
 > `shift_right` do not need to be changed to return the original end of the
 > range.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > It is unfortunate to have duplicate versions of all algorithms, but it is a
 > simplification for it to actually be all of them rather than most of them.
 > The analysis of the `shift_left` return value is correct, even if the result
 > is not perfectly easy to use in all cases.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > Good to continue rangifying the algorithms we missed.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 ## Poll 6: [[P2255R2]] A Type Trait To Detect Reference Binding To Temporary ## {#poll-6}
 
@@ -419,24 +419,24 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > language solutions would be either incomplete or no more automatic than using
 > a trait.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Lets us take code that currently dangles and make it not compile. Seems
 > great. Would be better if this were unnecessary and instead somehow
 > detectable by the language, but until that happens, this is a worthwhile
 > substitute.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This is a trait that is next to impossible to get right outside of the
 > standard library, so it should definitely be provided by us.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > This fixes the reported problem. I'm not thrilled that we have to solve it
 > this way, but I have no better suggestion either.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > This proposes a very clever facility that experts can use to protect against
 > a small subset of value lifetime errors in C++ programs. It is one of a
@@ -445,7 +445,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > help users avoid accidentally-dangling references, but at the cost of adding
 > yet another complex subtlety for library authors.
 >
-> -- Neutral
+> — Neutral
 
 ## Poll 7: [[P1885R8]] Naming Text Encodings To Demystify Them ## {#poll-7}
 
@@ -514,30 +514,30 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 >
 > A code unit-based interpretation is much more fruitful. Strongly in favor.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > There is no good solution for providing names for all encodings because the
 > same name has been reused to mean different things. The history of text is
 > full of problems. This proposal however, provides enough information to code
 > that the compiler knows such that literals can actually be decoded.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This paper provides important APIs for identifying standard encodings and is
 > critical for building higher level text processing facilities.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Seems reasonable, but experimenting with this will be required to make sure
 > we got it right.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > I have some concerns about coupling ourselves to the IANA database, but it
 > seems that rumours of its death were exaggerated, so maybe it's OK. It's a
 > hard problem, I hope this is the right solution.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > The new API gives access to compilation information that is otherwise very
 > difficult to obtain. It can be used efficiently at compile time. It makes
@@ -548,7 +548,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > deal with the incompatibilities. This proposal isn't perfect, but I don't
 > know how to make it any better.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > I remain concerned about:
 >
@@ -563,7 +563,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > I think many of these issues are fixable, so long as they are addressed for
 > C++23.
 >
-> -- Neutral
+> — Neutral
 
 > I don't like the spelling of `text_encoding::id` enumerators; there seems to
 > be no consistency in casing and the style - if a single one even exists - is
@@ -572,7 +572,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > names already since we are dropping the "cs" prefix and renaming two
 > encodings.
 >
-> -- Neutral
+> — Neutral
 
 > This feature is every useful (see for example next poll) and I believe should
 > be included in standard. However, after reading [[P2491R0]], I agree that
@@ -580,7 +580,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > IANA schemes to `sizeof(char_size) == 1`, i.e. leaving `wide_literal`
 > implementation defined now.
 >
-> -- Weakly Against
+> — Weakly Against
 
 > The concerns expressed in [[P2491R0]] are very real. When `wchar_t` is in use
 > and is of the right size, it is plausible to use names like UTF-16 to refer
@@ -598,7 +598,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > choices made in the extremely troublesome area of non-octet-based encoding
 > schemes.
 >
-> -- Weakly Against
+> — Weakly Against
 
 > See [[P2491R0]] (Text Encodings Follow-Up) for details. In short:
 >
@@ -609,7 +609,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > - [[P1885R8]] attempts to specify object representation, which breaks an
 >   important C++ abstraction barrier
 >
-> -- Strongly Against
+> — Strongly Against
 
 > The observations in [[P2491R0]] are on point. The present proposal disregards
 > an existing ISO standard in favour of "existing practice", which is not a
@@ -618,7 +618,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > [[P2491R0]]'s point that the library is the wrong place to talk about object
 > representation is serious and warrants more work.
 >
-> -- Strongly Against
+> — Strongly Against
 
 ## Poll 8: [[P2419R1]] Clarify Handling Of Encodings In Localized Formatting Of Chrono Types ## {#poll-8}
 
@@ -626,16 +626,16 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > to provide better results if they want to. It is uniformly applicable across
 > all Unicode encoding forms. It resolves the LWG issue adequately.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This seems to be the least worst solution to the problem, and we need one now.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Looks ok, although I'd prefer solving the general problem of mixing literal
 > and locale-dependent encodings.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > Handling a mismatch between the literal encoding and the locale's encoding
 > requires a great deal of machinery and discipline, but since in practice the
@@ -643,12 +643,12 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > type, it is obviously the correct approach to select the characters from the
 > locale and the encoding from the implementation.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > I remain concerned about use of the literal encoding as a proxy for the
 > encoding of the output.
 >
-> -- Neutral
+> — Neutral
 
 ## Poll 9: [[P2460R0]] Relax Requirements On `wchar_t` To Match Existing Practices ## {#poll-9}
 
@@ -657,22 +657,22 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > fixing this helps in cleaning up treatment of text literals throughout the
 > standard.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > The requirements on `wchar_t` have never been useful in practice and there
 > are platforms where no conforming implementation has ever existed.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Useful relaxation of requirements. We want C++ to be suitable for development
 > on a major platform.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > Bringing `wchar_t`'s standardization in line with its actual real world usage
 > is probably a good thing.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > There is of course fundmentally no good answer here now. The adoption of
 > 16-bit `wchar_t` on Windows *was* an attempt to satisfy [basic.fundamental]/8
@@ -686,7 +686,7 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > wchar_t is just another code-unit type whose library functions are not
 > portably usable.
 >
-> -- Neutral
+> — Neutral
 
 > The standard should take a clear stance on whether UTF-16 as a `wchar_t`
 > encoding is ok or not. If it's ok, a substantial overhaul of the relevant
@@ -695,19 +695,19 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > UTF-16 as a literal encoding (which this paper achieves) but then disallowing
 > that same encoding for the entirety of the standard library is unwise.
 >
-> -- Weakly Against
+> — Weakly Against
 
 ## Poll 10: [[P2445R0]] `forward_like` ## {#poll-10}
 
 > Already using it, can't imagine this not being in `std::`.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > Despite the fact, that this paper introduce 3rd independent way of forwarding
 > in standard, I think that it is necessary. Especially when the number of
 > cases when this is needed will be dramatically increased by deducing this.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > The deducing-this feature is, not without reason, quite complicated; we need
 > features like this to minimize the complexity for programmers.  The analysis
@@ -715,17 +715,17 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > exactly the situations where all corner cases will be exercised without
 > direct human checking.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > I'm really torn on this one because I find its value to be quite a bit
 > overstated, despite having clear use-cases.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > The gap this paper fills was not large until the adoption of explicit this
 > parameter.
 >
-> -- Neutral
+> — Neutral
 
 ## Poll 11: [[P2417R0]] A More `constexpr` `bitset` ## {#poll-11}
 
@@ -733,37 +733,37 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > here is constexpr, the better. Especially if you want to gain more foothold
 > on e.g. embedded systems ...
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > To me bitset is an essential building block for flags/masks that should
 > replace int/enum-based flags. Marking almost all operations of bitset
 > constexpr brings us closer to abandoning "unsafe" practices.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > We do constexpr bitset operations, but implemented our own. This may
 > eliminate the need for that.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > Everything that can be constexpr should be constexpr.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > There's no reason that this shouldn't be usable at compile time.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > I think this is a (minor) implementer burden, without providing much value to
 > users. In my experience, bitset isn't used much in the wild.
 >
-> -- Neutral
+> — Neutral
 
 > I was for, but some library implementers pointed out issued with the hash
 > functions, and they are still in the proposal. I'm reluctant to back a
 > library feature our implementers are not comfortable with
 >
-> -- Neutral
+> — Neutral
 
 ## Poll 12: [[P1841R1]] Wording For Individually Specializable Numeric Traits ## {#poll-12}
 
@@ -773,24 +773,24 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > 754 types. I also approve of the removal of `value_exists` and `value_or` from
 > the proposal.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This is quite an improvement on the aging design of `numeric_limits` - which
 > IMHO should be deprecated immediately after this has been adopted.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > It is unfortunate to introduce further duplicate facilities into the standard
 > library, but the motivation for doing so in this case is sound.  There are
 > several wording issues in the current version, but they can plainly be
 > addressed by LWG with perhaps some minor questions to lib-ext@.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 > This is yet another work around for having a lack of proper static
 > customization facility in the language.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
 ## Poll 13: [[P0627R6]] Function To Mark Unreachable Code ## {#poll-13}
 
@@ -799,13 +799,13 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > (optionally) emitting traps for statements incorrectly marked unreachable.
 > Anyone who prefers the defined trap in all cases can call `abort`.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > I have comprehensive experience with the "compiler magic less" implementation
 > of `unreachable` - this function is essential in documenting impossible
 > values/finding bugs.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > This function reflects well what implementations already provide, without
 > overstepping by asking for additional features (see e.g., Section 4.2,
@@ -814,10 +814,10 @@ Poll 13: Send [[P0627R6]] (Function To Mark Unreachable Code), which was
 > contract forms in general, I like that calling `unreachable` is undefined
 > behavior, whereas failing a contract assertion might not be.
 >
-> -- Strongly Favor
+> — Strongly Favor
 
 > The message based unreachable doesn't seem super important, so I'm fine
 > pushing through unreachable without the message.
 >
-> -- Weakly Favor
+> — Weakly Favor
 
